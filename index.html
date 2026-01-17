@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <div class="calculator-container">
+        <div class="header">
+            <span class="logo">Calc.</span>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="display">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+
+        <div class="keypad">
+            <!-- Row 1: Scientific & Clear -->
+            <button class="btn btn-sci" data-action="sin">sin</button>
+            <button class="btn btn-sci" data-action="cos">cos</button>
+            <button class="btn btn-sci" data-action="tan">tan</button>
+            <button class="btn btn-sci" data-action="log">log</button>
+            
+            <!-- Row 2 -->
+            <button class="btn btn-function" data-action="clear">AC</button>
+            <button class="btn btn-function" data-action="delete">⌫</button>
+            <button class="btn btn-operator" data-action="%">%</button>
+            <button class="btn btn-operator" data-action="divide">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-number">7</button>
+            <button class="btn btn-number">8</button>
+            <button class="btn btn-number">9</button>
+            <button class="btn btn-operator" data-action="multiply">×</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-number">4</button>
+            <button class="btn btn-number">5</button>
+            <button class="btn btn-number">6</button>
+            <button class="btn btn-operator" data-action="subtract">−</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-number">1</button>
+            <button class="btn btn-number">2</button>
+            <button class="btn btn-number">3</button>
+            <button class="btn btn-operator" data-action="add">+</button>
+
+            <!-- Row 6 -->
+            <button class="btn btn-number btn-zero">0</button>
+            <button class="btn btn-number">.</button>
+            <button class="btn btn-equals" data-action="calculate">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
